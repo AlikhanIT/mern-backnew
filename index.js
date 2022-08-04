@@ -11,7 +11,7 @@ import handleValidationErrors from "./utils/handleValidationErrors.js";
 const pwForDb = 'MadMan3002';
 const loginForDb = 'admin';
 
-mongoose.connect(`mongodb+srv://${loginForDb}:${pwForDb}@cluster0.nh06rrw.mongodb.net/blog?retryWrites=true&w=majority`)
+mongoose.connect(process.env.MONGODB_URL)
     .then(() => console.log('DB ok'))
     .catch((err) => console.log('DB error ', err));
 
