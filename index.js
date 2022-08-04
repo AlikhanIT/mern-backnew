@@ -8,9 +8,6 @@ import {create, edit, getAll, getLastTags, getOne, remove} from "./controllers/P
 import multer from 'multer';
 import handleValidationErrors from "./utils/handleValidationErrors.js";
 
-const pwForDb = 'MadMan3002';
-const loginForDb = 'admin';
-
 mongoose.connect(process.env.MONGODB_URL)
     .then(() => console.log('DB ok'))
     .catch((err) => console.log('DB error ', err));
